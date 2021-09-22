@@ -8,7 +8,7 @@ const urlsToCache = [
   './reset.css',
   './script.js',
   './style1.css',
-  './style2.css',
+  './style2.css'
 ];
 
 self.addEventListener('install', (event) => {
