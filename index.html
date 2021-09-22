@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style2.css" media="screen and (max-width:600px)">
+    <link rel="stylesheet" href="./style1.css" media="screen and (min-width:600px)">
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>microscope test</title>
+  </head>
+  <body>
+    <div id="header">
+      <span>顕微鏡使用予定表</span>
+    </div>
+    <div id="main">
+      <div id="cal"></div>
+      <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdMxq0eaWmMNypCXFqhP2Vx4VaANjzeIoYWvjmZFEmrbScjCQ/formResponse" method="POST" name="reserveForm" target="dummyIframe" onsubmit="submitForm()">
+          <div id="userNameList" class="m-form-select">
+          <select name="entry.531275340" required>
+            <option value="" disabled selected style="display:none;">名前</option>
+          </select>
+        </div>
+        <div id="deviceList" class="m-form-select">
+          <select required multiple>
+            <option value="" disabled selected style="display:none;">顕微鏡</option>
+          </select>
+          <div id="hiddenInputs" style="display:none;">
+
+          </div>
+        </div>
+        <div id="date">
+          <input id="actingin" type="date" required>
+          <div></div>
+          <input id="takeYear" type="number" name="entry.738513222_year">
+          <input id="takeMonth" type="number" name="entry.738513222_month">
+          <input id="takeDay" type="number" name="entry.738513222_day">
+          <input id="takefull" type="number" name="dlut">
+        </div>
+        <div id="startTime" class="m-form-select">
+          <select name="entry.1995635859" required>
+            <option value="" disabled selected style="display:none;">開始時刻</option>
+          </select>
+        </div>
+        <div id="endTime" class="m-form-select">
+          <select name="entry.1168186820" required>
+            <option value="" disabled selected style="display:none;">終了時刻</option>
+          </select>
+        </div>
+        <div id="color" class="m-form-select">
+          <select name="entry.1443020940" required>
+            <option value="" disabled selected style="display:none;">色</option>
+            <option value="トマト" style="background-color:#D50000;">トマト</option>
+            <option value="ミカン" style="background-color:#F4511E;">ミカン</option>
+            <option value="バナナ" style="background-color:#F6BF26;">バナナ</option>
+            <option value="バジル" style="background-color:#0B8043;">バジル</option>
+            <option value="セージ" style="background-color:#33B679;">セージ</option>
+            <option value="ピーコック" style="background-color:#039BE5;">ピーコック</option>
+            <option value="ブルーベリー" style="background-color:#3F51B5;">ブルーベリー</option>
+            <option value="ラベンダー" style="background-color:#7986CB;">ラベンダー</option>
+            <option value="ブドウ" style="background-color:#8E24AA;">ブドウ</option>
+            <option value="フラミンゴ" style="background-color:#E67C73;">フラミンゴ</option>
+            <option value="グラファイト" style="background-color:#616161;">グラファイト</option>
+          </select>
+        </div>
+        <input type="text" name="entry.233889689" value="" style="display:none;" id="keyInput">
+        <div id="submit">
+          <button id="submitButton" type="submit" name="button" value="送信">送信</button>
+          <!-- <button id="submitButton" type="submit" name="button" value="送信">送信</button> -->
+        </div>
+      </form>
+      <iframe name="dummyIframe" style="display:none;"></iframe>
+    </div>
+    <script type="text/javascript">
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker
+          .register('./service-worker.js')
+          .then(registration => {
+             console.log('Service Worker Registered');
+          });
+      }
+    </script>
+    <script src="./script.js"></script>
+  </body>
+</html>
