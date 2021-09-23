@@ -35,8 +35,7 @@ actingInput.addEventListener("input", () => {
 
 
 // iframe ↓
-const calendarElem = `<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FTokyo&src=NnNoNmQ2ZW51bmptMmQ4ODlmN3MycnYxcW9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23AD1457&showTitle=0&showTz=0&mode=WEEK&showPrint=0&showNav=1&showDate=0&showTabs=0&showCalendars=0" width="${innerWidth*0.9}" height="${(innerWidth>=600)?(innerHeight*0.85):(innerHeight*0.55)}" frameborder="0" scrolling="no"></iframe>`;
-// const calendarElem = `<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FTokyo&src=NnNoNmQ2ZW51bmptMmQ4ODlmN3MycnYxcW9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23AD1457&showTitle=0&showTz=0&mode=WEEK&showPrint=0&showNav=1&showDate=0&showTabs=0&showCalendars=0" width="${innerWidth*0.9}" height="${innerHeight*0.55}" frameborder="0" scrolling="no"></iframe>`;
+const calendarElem = `<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FTokyo&src=cTJsbTN2cXNjNmx1bW5saTBiZjllbXA2dGNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23D81B60&showTitle=0&showNav=1&showDate=0&showPrint=0&showCalendars=0&showTz=0&showTabs=0" width="${innerWidth*0.9}" height="${(innerWidth>=600)?(innerHeight*0.85):(innerHeight*0.55)}" frameborder="0" scrolling="no"></iframe>`;
 document.body.querySelector('#cal').insertAdjacentHTML('afterBegin', calendarElem);
 // iframe ↑
 
@@ -74,7 +73,7 @@ for(let i=0; i <15; i++) {
 
 
 // user name ↓
-const members = ['user1', 'user2', 'user3', 'user4'];
+const members = ['Endo', 'Kasai', 'Goto', 'Tanaka'];
 let userSelector = document.querySelector('#userNameList select');
 let returnOption = (name) => `<option value="${name}">${name}</option>`;
 for(let i=0; i<members.length; i++) {
@@ -88,7 +87,7 @@ if (yourName !== null) {
 
 
 // device ↓
-const devices = ['device1', 'device2', 'device3', 'device4', 'device5', 'device6', 'device7', 'device8'];
+const devices = ['Pascal', 'Raman', 'pH meter', 'Obs.5Live', 'heater', 'Obs.Z1', 'Obs.A1', 'controller'];
 let deviceSelector = document.querySelector('#deviceList select');
 for(let i=0; i<devices.length; i++) {
   deviceSelector.insertAdjacentHTML('beforeEnd',returnOption(devices[i]));
@@ -104,7 +103,7 @@ if (yourDevice !== null) {
   }
   for(let i=0; i<yourDevice.length; i++) {
     if (yourDevice[i]) {
-      const inputElem = `<input type="text" name="entry.783354646" value="${devices[i-1]}">`;
+      const inputElem = `<input type="text" name="entry.2117951491" value="${devices[i-1]}">`;
       hiddenInputs.insertAdjacentHTML('beforeEnd',inputElem);
       deviceOptions[i+1].selected = true;
     }
@@ -120,7 +119,7 @@ deviceSelector.addEventListener("input", () => {
   for(let i=1; i<=devices.length; i++) {
     usingDevice[i-1] = false;
     if (deviceOptions[i].selected) {
-      const inputElem = `<input type="text" name="entry.783354646" value="${devices[i-1]}">`;
+      const inputElem = `<input type="text" name="entry.2117951491" value="${devices[i-1]}">`;
       hiddenInputs.insertAdjacentHTML('beforeEnd',inputElem);
       usingDevice[i-1] = true;
     }
