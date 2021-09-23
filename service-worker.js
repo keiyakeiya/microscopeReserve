@@ -1,7 +1,8 @@
 'use strict';
 
 // const CACHE_NAME = 'cache-v1';
-const CACHE_NAME = 'cache-v2';
+// const CACHE_NAME = 'cache-v2';
+const CACHE_NAME = 'cache-v3';
 
 const urlsToCache = [
   './index.html',
