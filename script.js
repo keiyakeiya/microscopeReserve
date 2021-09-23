@@ -103,7 +103,8 @@ if (yourDevice !== null) {
   }
   for(let i=0; i<yourDevice.length; i++) {
     if (yourDevice[i]) {
-      const inputElem = `<input type="text" name="entry.2117951491" value="${devices[i-1]}">`;
+      // const inputElem = `<input type="text" name="entry.2117951491" value="${devices[i-1]}">`;
+      const inputElem = `<input type="text" name="entry.2117951491" value="${devices[i]}">`;
       hiddenInputs.insertAdjacentHTML('beforeEnd',inputElem);
       deviceOptions[i+1].selected = true;
     }
