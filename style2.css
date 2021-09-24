@@ -9,6 +9,7 @@ body {
   color: #FFFFFF;
   background-color: #BBDEFB;
   font-family: 'Kosugi Maru', sans-serif;
+  overflow-y: hidden;
 }
 
 #header {

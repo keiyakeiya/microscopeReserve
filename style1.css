@@ -8,6 +8,7 @@ html {
 body {
   color: #FFFFFF;
   font-family: 'Kosugi Maru', sans-serif;
+  overflow-y: hidden;
 }
 
 #header {
