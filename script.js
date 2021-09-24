@@ -182,6 +182,43 @@ if (yourColor !== null) {
 // schedule color ↑
 
 
+// scroll ↓
+let startY, endY;
+const threshold = 20;
+
+let jump2Bottom = () => {
+  let element = document.documentElement;
+  let bottom = element.scrollHeight - element.clientHeight;
+  window.scroll({top:bottom, behavior: 'smooth'});
+};
+
+let jump2Top = () => {
+  window.scroll({top:0, behavior: 'smooth'});
+};
+
+window.addEventListener("touchstart", (e) => {
+  startY = e.touches[0].pageY;
+},false);
+
+window.addEventListener("touchmove", (e) => {
+  e.preventDefault();
+  endY = e.changedTouches[0].pageY;
+}, {passive:false});
+
+window.addEventListener("touchend", (e) => {
+  // console.log('start: ' + startY);
+  // console.log('end:   ' + endY);
+  if (startY > endY + threshold) {
+    // down scroll
+    jump2Bottom();
+  } else if (startY + threshold < endY) {
+    // up scroll
+    jump2Top();
+  }
+},false);
+// scroll ↑
+
+
 // key ↓
 let keyElem = document.querySelector('#keyInput');
 let key = JSON.parse(window.localStorage.getItem('validation'));
