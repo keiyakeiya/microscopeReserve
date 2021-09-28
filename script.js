@@ -236,6 +236,9 @@ let submitForm = () => {
   window.localStorage.setItem('lastUsedName', JSON.stringify(userSelector.value));
   window.localStorage.setItem('lastUsedDevice', JSON.stringify(usingDevice));
   window.localStorage.setItem('lastUsedColor', JSON.stringify(colorSelector.value));
+
+  jump2Top();
+  document.querySelector('#cal iframe').contentWindow.location.reload();
   // setTimeout( () => location.reload(), 100);
 };
 // submition ↑
