@@ -62,8 +62,10 @@ window.addEventListener("resize", () => resizeForm(),false);
 // start & end time list ↓
 let startTimeElm = document.querySelector('#startTime select');
 let endTimeElm   = document.querySelector('#endTime select');
-for(let i=0; i <15; i++) {
-  const h   = 10+ Math.floor(i/2);
+// for(let i=0; i <15; i++) {
+//   const h   = 10+ Math.floor(i/2);
+for(let i=0; i <19; i++) {
+  const h   = 8+ Math.floor(i/2);
   const min = (i%2 === 0)? '00': '30';
   const insertElem = `<option value="${h}:${min}">${h}:${min}</option>`;
   startTimeElm.insertAdjacentHTML('beforeEnd', insertElem);
