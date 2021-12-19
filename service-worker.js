@@ -3,7 +3,7 @@
 // const CACHE_NAME = 'mr_cache_v1';
 // const CACHE_NAME = 'mr_cache_v2';
 // const CACHE_NAME = 'mr_cache_v3';
-const CACHE_NAME = 'mr_cache_v5';
+const CACHE_NAME = 'mr_cache_v6';
 
 const urlsToCache = [
   './index.html',
